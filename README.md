@@ -4,3 +4,30 @@ Abstract—Functional near-infrared spectroscopy (fNIRS), with its non-invasive 
 
 # Data
 Data will be made available on request. If you need it, please contact yumenghan@tju.edu.cn. 
+
+# Read Me
+main_plot_group_BLisEnd_P42：
+画想象说开心/悲伤/休息条件下显著响应通道的曲线图
+输入：
+- TrialData_BLisEnd.mat	血红蛋白浓度trial数据矩阵
+- Test_result_BLisEnd_P5.mat	显著响应的统计结果
+- TrialRej_BLisEnd_P4.mat	trial离群值被拒绝的情况
+输出：显著响应通道在happy/sad/rest的HbX曲线图
+
+main_cortex_dataprep：
+将每个通道的HbO平均浓度，或p值（以负对数表示），投影到皮层上
+输出：groupResults.mat，Atlasviewer可读的HbX conc浓度数据
+
+brain_statistic.py:
+分析想象快乐/想象悲伤的左右半球显著性及柱形图绘制
+输入：
+-Mean_HbO_trial.mat 想象开心/想象悲伤trial数据矩阵
+输出：
+柱形图
+
+h_and_s_sta.py:
+分析想象快乐与想象悲伤显著性及柱形图绘制
+输入：
+-Mean_HbO_trial.mat 想象开心/想象悲伤trial数据矩阵
+输出：
+柱形图
